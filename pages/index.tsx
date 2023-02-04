@@ -1,21 +1,26 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../src/styles/pages/Home.module.css'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import Hero from "../src/components/Hero";
+import styles from "../src/styles/pages/Home.module.css";
 
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Purspray</title>
-        <meta name="description" content="Pianowanie " />
-        <link rel="icon" href="/favicon.ico" />
+        <title>Purspray - Pianowanie Poddaszy</title>
+        <meta
+          name="description"
+          content="Pianowanie Pur, ocieplanie poddaszy metodą pianową"
+        />
+        <link rel="icon" href="/logo.png" />
       </Head>
 
       <main className={styles.main}>
-        </main>
+        <Hero />
+      </main>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

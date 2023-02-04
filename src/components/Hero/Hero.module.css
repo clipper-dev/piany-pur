@@ -1,0 +1,73 @@
+.container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  z-index: 1;
+}
+.content h1 {
+  font-size: 7rem;
+  line-height: 8.5rem;
+  margin: 2rem 0;
+  font-weight: 800;
+  /* gradient text */
+  background: var(--header-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  max-width: 10ch;
+}
+.content p {
+  font-size: 1rem;
+  line-height: 2rem;
+  font-weight: 400;
+  max-width: 51ch;
+}
+.content ul {
+  list-style: none;
+  line-height: 2rem;
+  padding-left: 1.5rem;
+}
+.content ul li {
+  position: relative;
+}
+.content ul li::before {
+  content: "🔥";
+  position: absolute;
+  left: -1.5rem;
+  color: var(--coolbiej-colors-tomato-500);
+}
+.imageWrapper {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.image {
+  width: 900px;
+  height: 650px;
+  position: relative;
+}
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background: var(--header-gradient);
+  color: var(--coolbiej-colors-white);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.button:hover {
+    filter: brightness(0.9);
+  transform: translateY(-0.2rem);
+}
+.button:active {
+  transform: translateY(0.2rem);
+}

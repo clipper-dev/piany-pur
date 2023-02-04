@@ -16,6 +16,11 @@ a {
   margin: 0;
   padding: 0;
 }
+:root{
+  --accent: #ff6600;
+  --header-gradient: linear-gradient(135deg, var(--coolbiej-colors-yellowmellow-600) 0%, var(--accent) 100%);
+
+}
 
 @media (prefers-color-scheme: dark) {
 }

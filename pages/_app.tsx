@@ -7,7 +7,7 @@ import {data} from '../src/data/menu'
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Navbar navbarData={data} sideBardata={data} favicon="/favicon.ico" title="Purspray"/>
+      <Navbar navbarData={data} sideBardata={data} favicon="/res/logo-purspray.png" title="" phone="+48 664 489 898"/>
       <Component {...pageProps} />
     </>
   );

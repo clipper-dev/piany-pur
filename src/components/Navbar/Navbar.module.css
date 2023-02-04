@@ -31,12 +31,18 @@
   top: 40px;
   z-index: 999;
 }
+.middle, .szczecin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
 
 .logo {
   cursor: pointer;
   position: relative;
   height: 35px;
-  width: 35px;
+  width: 150px;
 }
 .logoContainer {
   display: flex;

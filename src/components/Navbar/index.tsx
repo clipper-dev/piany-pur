@@ -6,8 +6,8 @@ import Image from "next/image";
 /*Styling*/
 import styles from "./Navbar.module.css";
 /*Icons*/
-import { FaArrowDown, FaBars } from "react-icons/fa";
-import { IoIosArrowDown } from "react-icons/io";
+import { FaArrowDown, FaBars, FaLocationArrow, FaPhone } from "react-icons/fa";
+import { IoIosArrowDown, IoIosPhonePortrait, IoIosPin } from "react-icons/io";
 import { useRouter } from "next/router";
 import { Navitem } from "../../types/types";
 
@@ -16,16 +16,15 @@ interface Props {
   sideBardata: Navitem[],
   favicon: string,
   title: string,
+  phone: string
 }
 
-function Navbar({navbarData, sideBardata, favicon, title}:Props) {
+function Navbar({navbarData, sideBardata, favicon, title, phone}:Props) {
   const [sideBar, setSideBar] = useState(false);
   const showSideBar = () => setSideBar(!sideBar);
   const [button] = useState(true);
-  const router = useRouter();
-  if (router.pathname === "/tools/idle-screen") {
-    return null;
-  }
+  const number = phone.replace(/\s/g, '').slice(3);
+  const firstThree = number;
   return (
     <nav className={styles.main}>
       <>
@@ -44,13 +43,19 @@ function Navbar({navbarData, sideBardata, favicon, title}:Props) {
               <Image
                 src={favicon}
                 alt={`${title} logo`}
-                layout="fill"
+                fill
               />
             </div>
             <span>{title}</span>
           </a>
         </Link>
-        {/*Middle section of the navbar, responsible for the logo or company name*/}
+        {/* Middle section */}
+        <div className={styles.middle}>
+          <IoIosPhonePortrait/>
+          <span>Zadzwoń proszę: <a href={`tel:${number}`}>{phone}</a></span>
+        </div>
+
+        {/*Right section of the navbar, responsible for the options*/}
         <div className={styles.menu}>
           <div className={styles.tabs}>
             {navbarData.map((item, index) => {
@@ -110,6 +115,7 @@ function Navbar({navbarData, sideBardata, favicon, title}:Props) {
                 </div>
               );
             })}
+            <div className={styles.szczecin}><IoIosPin/> Zachodniopomorskie</div>
           </div>
         </div>
         {/*Right section of the navbar, responsible for the logo or company name*/}

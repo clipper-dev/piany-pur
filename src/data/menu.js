@@ -14,9 +14,4 @@ export const data = [
     type: "scroll",
     path: "kontakt",
   },
-  {
-    title: "Szczecin",
-    type: "info",
-    icon: "pin"
-  },
 ];
