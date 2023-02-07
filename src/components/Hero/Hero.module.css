@@ -6,6 +6,7 @@
 }
 .content {
   z-index: 1;
+  min-height: 500px;
 }
 .content h1 {
   font-size: 7rem;
@@ -18,19 +19,49 @@
   -webkit-text-fill-color: transparent;
   max-width: 10ch;
 }
+@media screen and (max-width: 600px) {
+  .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .content h1 {
+    font-size: 3.6rem;
+    line-height: 4rem;
+    margin: auto;
+  }
+}
 .content p {
   font-size: 1rem;
   line-height: 2rem;
   font-weight: 400;
   max-width: 51ch;
 }
+@media screen and (max-width: 600px) {
+  .content p {
+    line-height: 1.5rem;
+    margin: auto;
+    position: relative;
+    z-index: 3;
+    padding: 0 1rem;
+  }
+}
 .content ul {
   list-style: none;
   line-height: 2rem;
   padding-left: 1.5rem;
+  width: fit-content;
+}
+@media screen and (max-width: 600px) {
+  .content ul {
+    margin: auto;
+    
+  }
 }
 .content ul li {
   position: relative;
+  width: fit-content;
 }
 .content ul li::before {
   content: "🔥";
@@ -45,8 +76,13 @@
 }
 .image {
   width: 900px;
-  height: 650px;
+  aspect-ratio: 1920/1388;
   position: relative;
+  filter: blur(0.5rem);
+}
+@media screen and (max-width: 600px) {
+  .image {
+  }
 }
 .button {
   display: flex;
@@ -64,8 +100,14 @@
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
+@media screen and (max-width: 600px) {
+  .button {
+    margin: auto;
+    margin-top: 1rem;
+  }
+}
 .button:hover {
-    filter: brightness(0.9);
+  filter: brightness(0.9);
   transform: translateY(-0.2rem);
 }
 .button:active {

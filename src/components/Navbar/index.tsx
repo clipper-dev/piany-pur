@@ -51,8 +51,8 @@ function Navbar({navbarData, sideBardata, favicon, title, phone}:Props) {
         </Link>
         {/* Middle section */}
         <div className={styles.middle}>
-          <IoIosPhonePortrait/>
-          <span>Zadzwoń proszę: <a href={`tel:${number}`}>{phone}</a></span>
+          <FaPhone/>
+          <span>Zadzwoń: <a href={`tel:${number}`}>{phone}</a></span>
         </div>
 
         {/*Right section of the navbar, responsible for the options*/}

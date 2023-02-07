@@ -41,8 +41,8 @@
 .logo {
   cursor: pointer;
   position: relative;
-  height: 35px;
-  width: 150px;
+  height: 50px;
+  width: 192px;
 }
 .logoContainer {
   display: flex;
@@ -254,4 +254,8 @@
 }
 /*For mobiles*/
 @media only screen and (max-width: 600px) {
+  .middle{
+    display: none;
+  }
+  
 }
