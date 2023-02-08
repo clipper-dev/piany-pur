@@ -18,6 +18,7 @@ a {
 }
 :root{
   --accent: #ff6600;
+  --headerAccent: #201d1b;
   --header-gradient: linear-gradient(135deg, var(--coolbiej-colors-yellowmellow-600) 0%, var(--accent) 100%);
 
 }
