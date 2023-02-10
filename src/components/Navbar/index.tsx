@@ -12,18 +12,18 @@ import { useRouter } from "next/router";
 import { Navitem } from "../../types/types";
 
 interface Props {
-  navbarData: Navitem[],
-  sideBardata: Navitem[],
-  favicon: string,
-  title: string,
-  phone: string
+  navbarData: Navitem[];
+  sideBardata: Navitem[];
+  favicon: string;
+  title: string;
+  phone: string;
 }
 
-function Navbar({navbarData, sideBardata, favicon, title, phone}:Props) {
+function Navbar({ navbarData, sideBardata, favicon, title, phone }: Props) {
   const [sideBar, setSideBar] = useState(false);
   const showSideBar = () => setSideBar(!sideBar);
   const [button] = useState(true);
-  const number = phone.replace(/\s/g, '').slice(3);
+  const number = phone.replace(/\s/g, "").slice(3);
   const firstThree = number;
   return (
     <nav className={styles.main}>
@@ -40,21 +40,21 @@ function Navbar({navbarData, sideBardata, favicon, title, phone}:Props) {
         >
           <a className={styles.logoContainer}>
             <div className={styles["logo"]}>
-              <Image
-                src={favicon}
-                alt={`${title} logo`}
-                fill
-              />
+              <Image src={favicon} alt={`${title} logo`} fill />
             </div>
             <span>{title}</span>
           </a>
         </Link>
         {/* Middle section */}
         <div className={styles.middle}>
-          <FaPhone/>
-          <span>Zadzwoń: <a href={`tel:${number}`}>{phone}</a></span>
+          <FaPhone />
+          <span>
+            Zadzwoń: <a href={`tel:${number}`}>{phone}</a>
+          </span>
+          <span>
+            <IoIosPin /> Zachodniopomorskie
+          </span>
         </div>
-
         {/*Right section of the navbar, responsible for the options*/}
         <div className={styles.menu}>
           <div className={styles.tabs}>
@@ -66,10 +66,12 @@ function Navbar({navbarData, sideBardata, favicon, title, phone}:Props) {
                       href={`#${item.path}`}
                       onClick={(e) => {
                         e.preventDefault();
-                        document.querySelector(`#${item.path}`)?.scrollIntoView({
-                          behavior: "smooth",
-                        });
-                      }}                      
+                        document
+                          .querySelector(`#${item.path}`)
+                          ?.scrollIntoView({
+                            behavior: "smooth",
+                          });
+                      }}
                     >
                       {item.title}
                     </a>
@@ -83,17 +85,18 @@ function Navbar({navbarData, sideBardata, favicon, title, phone}:Props) {
                       passHref
                       legacyBehavior
                     >
-                      <a
-                      >{item.title}</a>
+                      <a>{item.title}</a>
                     </Link>
                   )}
                   {item.type === "dropdown" && (
                     <div className={styles.dropdown}>
-                      <div className={styles.dropdownTitle}>{item.title} <IoIosArrowDown/></div>
+                      <div className={styles.dropdownTitle}>
+                        {item.title} <IoIosArrowDown />
+                      </div>
                       <div className={styles.dropdownMenu}>
                         {item.items?.map((ii, index) => (
                           <Link
-                          key={index}
+                            key={index}
                             href={ii.path}
                             onClick={() => {
                               setSideBar(false);
@@ -101,25 +104,21 @@ function Navbar({navbarData, sideBardata, favicon, title, phone}:Props) {
                             passHref
                             legacyBehavior
                           >
-                            <a
-                          className={styles.dropdownItem}
-                            >{ii.title}</a>
+                            <a className={styles.dropdownItem}>{ii.title}</a>
                           </Link>
                         ))}
                       </div>
                     </div>
                   )}
-                  {item.type === "info" && (
-                    item.title
-                  )}
+                  {item.type === "info" && item.title}
                 </div>
               );
             })}
-            <div className={styles.szczecin}><IoIosPin/> Zachodniopomorskie</div>
           </div>
         </div>
-        {/*Right section of the navbar, responsible for the logo or company name*/}
+        {/*Right section of the navbar, CTA and mobile menu*/}
         <div className={styles.mobileMenu}>
+          <button>Kontakt</button>
           <div
             className={sideBar ? styles.menuIconActive : styles.menuIcon}
             onClick={() => {
@@ -141,22 +140,51 @@ function Navbar({navbarData, sideBardata, favicon, title, phone}:Props) {
           <div className={styles.sideBarMenu}>
             {sideBardata.map((item, index) => {
               return (
-                (item.type === "link" || item.type === "scroll") && (
-                  <Link href={item.path} key={index} passHref>
-                    <span
-                      className={[
-                        styles["sideBar-menu-item-text"],
-                        ["p--display"],
-                      ].join(" ")}
-                      onClick={() => {
-                        setSideBar(!sideBar);
+                <>
+                  {item.type === "link" && (
+                    <Link href={item.path} key={index} passHref>
+                      <span
+                        className={[
+                          styles["sideBar-menu-item-text"],
+                          ["p--display"],
+                        ].join(" ")}
+                        onClick={() => {
+                          setSideBar(!sideBar);
+                        }}
+                      >
+                        {item?.icon} {item.title}
+                      </span>
+                    </Link>
+                  )}
+                  {item.type === "scroll" && (
+                    <Link
+                      href={`#${item.path}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        document
+                          .querySelector(`#${item.path}`)
+                          ?.scrollIntoView({
+                            behavior: "smooth",
+                          });
                       }}
+                      key={index}
+                      passHref
                     >
-                      {item?.icon} {item.title}
-                    </span>
-                  </Link>
-                )
-              )
+                      <span
+                        className={[
+                          styles["sideBar-menu-item-text"],
+                          ["p--display"],
+                        ].join(" ")}
+                        onClick={() => {
+                          setSideBar(!sideBar);
+                        }}
+                      >
+                        {item?.icon} {item.title}
+                      </span>
+                    </Link>
+                  )}
+                </>
+              );
             })}
           </div>
         </div>

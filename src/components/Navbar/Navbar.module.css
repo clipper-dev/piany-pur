@@ -151,8 +151,9 @@
   display: flex;
   justify-content: center;
   position: fixed;
-  top: 60px;
-  background: var(--backgroundNavbar);
+  top: 60px;  
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   z-index: 80;
   border-top: 2px solid var(--primaryHighlight);
 }

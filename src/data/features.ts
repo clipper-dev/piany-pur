@@ -1,9 +1,4 @@
-interface Feature {
-    name: string;
-    description: string;
-    icon: string;
-    link?: string;
-}
+import { Feature } from "../types/types";
 const features: Feature[] = [
     {
         name: 'OSZCZĘDZAJ & TNIJ KOSZTY',

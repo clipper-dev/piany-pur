@@ -4,6 +4,8 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  font-family: Poppins;
 }
 
 a {
@@ -15,12 +17,17 @@ a {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-padding-top: 4rem;
 }
-:root{
-  --accent: #ff6600;
+:root {
+  --accent: #fe6301;
+  --accent2: #f4941f;
   --headerAccent: #201d1b;
-  --header-gradient: linear-gradient(135deg, var(--coolbiej-colors-yellowmellow-600) 0%, var(--accent) 100%);
-
+  --header-gradient: linear-gradient(
+    45deg,
+    var(--accent) 30%,
+    var(--accent2) 100%
+  );
 }
 
 @media (prefers-color-scheme: dark) {

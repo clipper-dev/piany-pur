@@ -11,3 +11,9 @@ export type Navsubitem = {
   path: string,
   type: string,
 };
+export interface Feature {
+  name: string;
+  description: string;
+  icon: string;
+  link?: string;
+}

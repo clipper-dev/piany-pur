@@ -28,7 +28,7 @@ export default function Features() {
     }
   }
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="oferta">
         <h2>CO WYRÓŻNIA IZOLACJĘ PIANĄ PUR?</h2>
       <div className={styles.features}>
         {features.map((feature, index) => (

@@ -5,7 +5,7 @@ import styles from "./Hero.module.css";
 
 export default function Hero() {
   return (
-    <header className={styles.container}>
+    <header className={styles.container} id="home">
       <article className={styles.content}>
         <h1>OCIEPLANIE PIANĄ PUR</h1>
         <p>

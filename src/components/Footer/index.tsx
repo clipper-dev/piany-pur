@@ -4,7 +4,7 @@ import styles from "./Footer.module.css";
 
 export default function Footer() {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="kontakt">
       <div className={styles.content}>
         <div className={styles.left}>
           <div className={styles.logo}>
