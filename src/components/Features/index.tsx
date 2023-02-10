@@ -29,8 +29,8 @@ export default function Features() {
   }
   return (
     <div className={styles.container}>
+        <h2>CO WYRÓŻNIA IZOLACJĘ PIANĄ PUR?</h2>
       <div className={styles.features}>
-        <h2>Co wyróżnia pianowanie Purspray?</h2>
         {features.map((feature, index) => (
           <div key={index} className={styles.feature}>
             <div className={styles.featureHeader}>

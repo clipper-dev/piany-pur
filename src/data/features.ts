@@ -13,25 +13,25 @@ const features: Feature[] = [
     },
     {
         name: 'TERMICZNIE EFEKTYWNE',
-        description: 'Izolacja natryskowa to zarówno materiał izolacyjny, jak i bariera powietrzna.',
+        description: 'Izolacja natryskowa może służyć zarówno jako materiał izolacyjny, jak i bariera powietrzna.',
         icon: 'thermometer',
         link: '/#'
     },
     {
         name: 'WYSOKA TRWAŁOŚĆ NA LATA',
-        description: 'Izolacja natryskowa będzie trwała przez cały czas istnienia budynku.',
+        description: 'Piana Pur będzie trwała przez cały czas istnienia budynku.',
         icon: 'life',
         link: '/#'
     },
     {
         name: 'SZYBKA INSTALACJA',
-        description: 'Izolacja natryskowa jest szybka w montażu i nie wymaga przerwy w działalności.',
+        description: 'Piana izolacyjna szybka w montażu i nie wymaga przerwy w działalności.',
         icon: 'fast',
         link: '/#'
     },
     {
         name: 'REDUKCJA HAŁASU',
-        description: 'Izolacja natryskowa zapewnia wysoki poziom izolacji akustycznej.',
+        description: 'Opianowanie pomieszczenia pianą Pur zapewnia wysoki poziom izolacji akustycznej.',
         icon: 'sound',
         link: '/#'
     },

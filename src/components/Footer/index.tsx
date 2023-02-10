@@ -10,12 +10,14 @@ export default function Footer() {
           <div className={styles.logo}>
             <Image src={"/res/logo.png"} alt={`Purspray logo`} fill />
           </div>
-          <h3>SKONTAKTUJ SIĘ Z NAMI</h3>
-          <p>ul. Kolejowa 1</p>
-          <p>32-600 Krosno</p>
-          <p>tel. 500 500 500</p>
+          <h3>POROZMAWIAJMY!</h3>
+          <div className={styles.line}></div>
+          <p>Purspray</p>
+          <p>Arkadiusz Wilk</p>
+          <p>NIP: 8571030470</p>
+          <p>REGON: 522255463</p>
         </div>
-        <div className={styles.right}>
+        <div className={styles.middle}>
           <div className={styles.topForm}>
             <div className={styles.inputField}>
               <div className={styles.label}>Imię:*</div>
@@ -39,6 +41,16 @@ export default function Footer() {
           </div>
           <button className={styles.button}>Wyślij</button>
         </div>
+        <div className={styles.right}>
+            <div className={styles.zachodniopomorskie}>
+              <Image
+                src={"/res/images/zach.png"}
+                alt={`Zachodniopomorskie logo`}
+                fill
+                />
+              </div>
+                <h3>DZIAŁAMY W CAŁYM ZACHODNIOPOMORSKIM</h3>
+          </div>
       </div>
     </div>
   );
