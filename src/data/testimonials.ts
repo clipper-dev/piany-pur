@@ -1,24 +1,24 @@
 import { Testimonial } from "./../types/types.d";
 export const data: Testimonial[] = [
   {
-    name: "John Doe",
+    name: "Kazimierz",
     title: "CEO",
-    company: "Company",
+    company: "prywaciarz",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nisl nisl aliquet nisl, eget aliquam nisl lorem quis nisl. Sed euismod, nunc ut aliquam aliquam, nisl nisl aliquet nisl, eget aliquam nisl lorem quis nisl.",
+      "Pianowanie izolacyjne firmy PurSpray przyniosło natychmiastową poprawę jakości izolacji w moim domu. Pracownicy byli punktualni, uprzejmi i bardzo profesjonalni w swoim podejściu do pracy. W szczególności chciałbym polecić pana Arkadiusza, który wykazał się głęboką wiedzą i doświadczeniem. Polecam tę firmę każdemu, kto potrzebuje fachowej izolacji.",
   },
   {
-    name: "John Doe",
+    name: "Alicja",
     title: "CEO",
-    company: "Company",
+    company: "dyrektorka szpitala",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nisl nisl aliquet nisl, eget aliquam nisl lorem quis nisl. Sed euismod, nunc ut aliquam aliquam, nisl nisl aliquet nisl, eget aliquam nisl lorem quis nisl.",
+      "Firma PurSpray wykonuje wspaniałą robotę! Ich pianowanie izolacyjne Pur naprawdę zmieniło jakość naszego szpitala. Nie tylko zauważyliśmy znaczną poprawę izolacji, ale również oszczędność energii. Pracownicy byli punktualni i zawsze uśmiechnięci, a praca została wykonana szybko i sprawnie. Pan Arkadiusz, którego poznałam podczas pracy, okazał się być prawdziwym fachowcem z ogromnym doświadczeniem. Polecam PurSpray każdemu, kto szuka fachowej izolacji i doskonałej jakości usług.",
   },
   {
-    name: "John Doe",
+    name: "Radek",
     title: "CEO",
-    company: "Company",
+    company: "prywaciarz",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nisl nisl aliquet nisl, eget aliquam nisl lorem quis nisl. Sed euismod, nunc ut aliquam aliquam, nisl nisl aliquet nisl, eget aliquam nisl lorem quis nisl.",
+      "PurSpray zrobiła pianowanie izolacyjne Pur w moim domu i jestem w 100% zadowolony z ich usług. Pracownicy byli bardzo profesjonalni i mieli dużo doświadczenia w swojej pracy. Ich podejście było bardzo uprzejme i pomocne, co ułatwiło mi podjęcie decyzji o rodzaju izolacji do zastosowania.",
   },
 ];

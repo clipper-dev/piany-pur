@@ -1,9 +1,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import Bus from "../src/components/Bus";
-import Features from "../src/components/Features";
-import Hero from "../src/components/Hero";
+import Bus from "../src/components/Bus/Bus";
+import Features from "../src/components/Features/Features";
+import Hero from "../src/components/Hero/Hero";
+import Testimonials from "../src/components/Testimonials/Testimonials";
+import { data } from "../src/data/testimonials";
 import styles from "../src/styles/pages/Home.module.css";
 
 const Home: NextPage = () => {
@@ -18,11 +20,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="/logo.png" />
       </Head>
 
-      <main className={styles.main}>
         <Hero />
         <Features/>
+        <Testimonials testimonials={data}/>
         <Bus/>
-      </main>
     </div>
   );
 };

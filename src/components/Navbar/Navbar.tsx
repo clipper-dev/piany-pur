@@ -10,6 +10,7 @@ import { FaArrowDown, FaBars, FaLocationArrow, FaPhone } from "react-icons/fa";
 import { IoIosArrowDown, IoIosPhonePortrait, IoIosPin } from "react-icons/io";
 import { useRouter } from "next/router";
 import { Navitem } from "../../types/types";
+import Button from "../Button/Button";
 
 interface Props {
   navbarData: Navitem[];
@@ -51,7 +52,7 @@ function Navbar({ navbarData, sideBardata, favicon, title, phone }: Props) {
           <span>
             Zadzwoń: <a href={`tel:${number}`}>{phone}</a>
           </span>
-          <span>
+          <span className={"hide-1000"}>
             <IoIosPin /> Zachodniopomorskie
           </span>
         </div>
@@ -118,7 +119,7 @@ function Navbar({ navbarData, sideBardata, favicon, title, phone }: Props) {
         </div>
         {/*Right section of the navbar, CTA and mobile menu*/}
         <div className={styles.mobileMenu}>
-          <button>Kontakt</button>
+          <Button size={"btn--medium"} style={"btn--call-to-action"}>Kontakt</Button>
           <div
             className={sideBar ? styles.menuIconActive : styles.menuIcon}
             onClick={() => {

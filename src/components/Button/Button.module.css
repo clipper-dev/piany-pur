@@ -38,17 +38,16 @@
 }
 
 .btn--call-to-action {
-    font-weight: 800;
-    color: var(--fontMainContast);
-    background: linear-gradient(90deg,#ed6292 25%,#ed5760 87.5%);
-	border: solid 2px var(--alternateHighlight);
-	box-shadow: 2px 2px 8px var(--alternateHighlight);
-    padding: 0.2rem;
+    font-weight: 700;
+    color: var(--fontMainContast, white);
+    background: var(--header-gradient);
+	border: solid 2px var(--alternateHighlight, black);
+	box-shadow: var(--coolbiej-shadows-md);
+    padding: 0.5rem 1rem;
     border-radius: 0.3rem;
 }
 .btn--call-to-action:hover {
     color: var(--alternateHighlight);
-	border: solid 2px var(--alternateHighlight);
     background: var(--fontMainContast);
 }
 

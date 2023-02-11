@@ -1,14 +1,21 @@
 .container {
-  margin-top: 4rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
   z-index: 1;
+}
+.container section {
+  width: min(var(--coolbiej-sizes-container-xl), 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
   padding: 2rem 0;
   box-shadow: var(--coolbiej-shadows-lg), var(--coolbiej-shadows-md);
   border-radius: 2rem;
+
 }
 .container h2 {
   font-size: 2.5rem;
@@ -30,6 +37,8 @@
   align-items: baseline;
   justify-content: center;
   flex-wrap: wrap;
+  width: 100%;
+  
 }
 .feature {
   display: flex;

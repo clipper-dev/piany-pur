@@ -2,11 +2,16 @@ import Head from "next/head";
 import React from "react";
 import { useRouter } from "next/router";
 
-export default function Header({ name, description, canonical }) {
+interface Props {
+  name: string;
+  description: string;
+  canonical?: string;
+}
+export default function Header({ name, description, canonical }:Props) {
   const router = useRouter();
   return (
     <Head>
-      <meta charset="utf-8" />
+      <meta charSet="utf-8" />
       <link
         rel="icon"
         href="/images/favicon.png"

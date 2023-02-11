@@ -21,7 +21,7 @@ export default function Bus() {
               fill
             />
           </div>
-          <h2>DOTRZEMY WSZĘDZIE W ZACHODNIOPOMORSKIM</h2>
+          <h2>Dotrzemy wszędzie w Zachodniopomorskim 🚐</h2>
         </div>
       </section>
     </div>

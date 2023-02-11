@@ -29,18 +29,20 @@ export default function Features() {
   }
   return (
     <div className={styles.container} id="oferta">
+      <section>
         <h2>CO WYRÓŻNIA IZOLACJĘ PIANĄ PUR?</h2>
-      <div className={styles.features}>
-        {features.map((feature, index) => (
-          <div key={index} className={styles.feature}>
-            <div className={styles.featureHeader}>
-              <div className={styles.icon}>{getIcon(feature.icon)}</div>
-              <h3>{feature.name}</h3>
+        <div className={styles.features}>
+          {features.map((feature, index) => (
+            <div key={index} className={styles.feature}>
+              <div className={styles.featureHeader}>
+                <div className={styles.icon}>{getIcon(feature.icon)}</div>
+                <h3>{feature.name}</h3>
+              </div>
+              <p>{feature.description}</p>
             </div>
-            <p>{feature.description}</p>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

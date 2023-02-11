@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: 2rem;
 }
 .main {
   width: min(100%, var(--coolbiej-sizes-container-xl));

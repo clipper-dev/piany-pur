@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import Bus from "../src/components/Bus";
-import Features from "../src/components/Features";
-import Hero from "../src/components/Hero";
+import Bus from "../src/components/Bus/Bus";
+import Features from "../src/components/Features/Features";
+import Hero from "../src/components/Hero/Hero";
 import HeroAlt from "../src/components/Hero/HeroAlt";
 import Testimonials from "../src/components/Testimonials/Testimonials";
 import { data } from "../src/data/testimonials";

@@ -1,9 +1,9 @@
 import "../src/styles/globals.css";
 import "../src/styles/coolbiej.css";
 import type { AppProps } from "next/app";
-import { Navbar } from "../src/components/Navbar";
+import { Navbar } from "../src/components/Navbar/Navbar";
 import { data } from "../src/data/menu";
-import Footer from "../src/components/Footer";
+import Footer from "../src/components/Footer/Footer";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

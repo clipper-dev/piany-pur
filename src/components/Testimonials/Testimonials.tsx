@@ -8,8 +8,8 @@ interface Props {
 }
 export default function Testimonials({ testimonials }: Props) {
   return (
-    <div className={styles.container}>
-      <div className={styles.inner}>
+    <div className={styles.container} id={"opinie"}>
+      <section>
         <h2>ZADOWOLENI KLIENCI</h2>
         <div className={styles.testimonials}>
           {testimonials.map((testimonial, key) => (
@@ -23,7 +23,7 @@ export default function Testimonials({ testimonials }: Props) {
             </div>
           ))}
         </div>
-      </div>
+      </section>
     </div>
   );
 }

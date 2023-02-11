@@ -3,12 +3,23 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  min-height: 600px;
-  margin-bottom: 2rem;
+  height: fit-content;
+  min-height: 800px;
+  color: var(--accentGray);
+  justify-content: center;
+  align-items: center;
+}
+.container section {
+  width: min(var(--coolbiej-sizes-container-xl), 100%);
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
 }
 .content {
   z-index: 1;
-  min-height: 500px;
 }
 .content h1 {
   font-size: 7rem;
@@ -19,28 +30,29 @@
   background: var(--header-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  max-width: 10ch;
+  max-width: 700px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1500px) {
   .content{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: aliceblue;
   }
   .content h1 {
-    font-size: 3.6rem;
+    font-size: 4rem;
     line-height: 4rem;
-    margin: auto;
+    text-align: center;
   }
 }
 .content p {
   font-size: 1rem;
   line-height: 2rem;
   font-weight: 400;
-  max-width: 51ch;
+  max-width: 40ch;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .content p {
     line-height: 1.5rem;
     margin: auto;
@@ -55,7 +67,7 @@
   padding-left: 1.5rem;
   width: fit-content;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .content ul {
     margin: auto;
     
@@ -72,18 +84,19 @@
   color: var(--coolbiej-colors-tomato-500);
 }
 .imageWrapper {
+  height: 100%;
   position: absolute;
   right: 0;
   top: 0;
 }
 .image {
-  width: 900px;
+  height: 100%;
   aspect-ratio: 1920/1388;
   position: relative;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1500px) {
   .image {
-    filter: blur(0.5rem);
+    filter: blur(0.5rem) brightness(0.8);
   }
 }
 .button {
@@ -102,7 +115,7 @@
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .button {
     margin: auto;
     margin-top: 1rem;

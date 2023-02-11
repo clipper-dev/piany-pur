@@ -22,6 +22,11 @@ export const data:Navitem[] = [
     path: "oferta",
   },
   {
+    title: "Opinie",
+    type: "scroll",
+    path: "opinie",
+  },
+  {
     title: "Kontakt",
     type: "scroll",
     path: "kontakt",
