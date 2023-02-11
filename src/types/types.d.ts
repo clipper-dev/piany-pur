@@ -17,3 +17,10 @@ export interface Feature {
   icon: string;
   link?: string;
 }
+export type Testimonial = {
+  name: string;
+  title?: string;
+  company?: string;
+  description: string;
+  avatar?: string;
+};

@@ -1,0 +1,64 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: var(--header-gradient);
+    padding: 4rem 0;
+    margin: 1rem 0;
+}
+.inner {
+    width: min(var(--coolbiej-sizes-container-xl), 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.inner h2 {
+    color: white;
+}
+.testimonials {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 300px;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 0, 0, 0.2);
+    font-size: 0.8rem;
+    position: relative;
+}
+.quote {
+    align-self: flex-start;
+}
+.author, .company {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+}
+.footer{
+    align-self: flex-end;
+
+}
+.author {
+    font-weight: 600;
+    font-size: 1rem;
+}
+.company {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 0.8rem;
+}
