@@ -60,85 +60,91 @@ function Navbar({ navbarData, sideBardata, favicon, title, phone }: Props) {
         <div className={styles.menu}>
           <div className={styles.tabs}>
             {navbarData.map((item, index) => {
-              return (!item.hideDesktop && (
-                <div key={index} className={styles.tabItem}>
-                  {item.type === "scroll" && (
-                    <a
-                      href={`#${item.path}`}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        document
-                          .querySelector(`#${item.path}`)
-                          ?.scrollIntoView({
-                            behavior: "smooth",
-                          });
-                      }}
-                    >
-                      {item.title}
-                    </a>
-                  )}
-                  {item.type === "link" && (
-                    <Link
-                      href={item.path}
-                      onClick={() => {
-                        setSideBar(false);
-                      }}
-                      passHref
-                      legacyBehavior
-                    >
-                      <a>{item.title}</a>
-                    </Link>
-                  )}
-                  {item.type === "dropdown" && (
-                    <div className={styles.dropdown}>
-                      <div className={styles.dropdownTitle}>
-                        {item.title} <IoIosArrowDown />
+              return (
+                !item.hideDesktop && (
+                  <div key={index} className={styles.tabItem}>
+                    {item.type === "scroll" && (
+                      <a
+                        href={`#${item.path}`}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          document
+                            .querySelector(`#${item.path}`)
+                            ?.scrollIntoView({
+                              behavior: "smooth",
+                            });
+                        }}
+                      >
+                        {item.title}
+                      </a>
+                    )}
+                    {item.type === "link" && (
+                      <Link
+                        href={item.path}
+                        onClick={() => {
+                          setSideBar(false);
+                        }}
+                        passHref
+                        legacyBehavior
+                      >
+                        <a>{item.title}</a>
+                      </Link>
+                    )}
+                    {item.type === "dropdown" && (
+                      <div className={styles.dropdown}>
+                        <div className={styles.dropdownTitle}>
+                          {item.title} <IoIosArrowDown />
+                        </div>
+                        <div className={styles.dropdownMenu}>
+                          {item.items?.map((ii, index) => (
+                            <Link
+                              key={index}
+                              href={ii.path}
+                              onClick={() => {
+                                setSideBar(false);
+                              }}
+                              passHref
+                              legacyBehavior
+                            >
+                              <a className={styles.dropdownItem}>{ii.title}</a>
+                            </Link>
+                          ))}
+                        </div>
                       </div>
-                      <div className={styles.dropdownMenu}>
-                        {item.items?.map((ii, index) => (
-                          <Link
-                            key={index}
-                            href={ii.path}
-                            onClick={() => {
-                              setSideBar(false);
-                            }}
-                            passHref
-                            legacyBehavior
-                          >
-                            <a className={styles.dropdownItem}>{ii.title}</a>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                  {item.type === "info" && item.title}        
-                  
-                </div>)
-                
+                    )}
+                    {item.type === "info" && item.title}
+                  </div>
+                )
               );
-              
             })}
-            <Button size={"btn--medium"} style={"btn--call-to-action"} onClick={(e) => {
-                        e.preventDefault();
-                        document
-                          .querySelector(`#${"kontakt"}`)
-                          ?.scrollIntoView({
-                            behavior: "smooth",
-                          });
-                      }}>Kontakt</Button>
-          
+            <Button
+              size={"btn--medium"}
+              style={"btn--call-to-action"}
+              onClick={(e) => {
+                e.preventDefault();
+                document.querySelector(`#${"kontakt"}`)?.scrollIntoView({
+                  behavior: "smooth",
+                });
+              }}
+            >
+              Kontakt
+            </Button>
           </div>
         </div>
         {/*Right section of the navbar, CTA and mobile menu*/}
         <div className={styles.mobileMenu}>
-          <Button size={"btn--medium"} style={"btn--call-to-action"} onClick={(e) => {
-                        e.preventDefault();
-                        document
-                          .querySelector(`#${"kontakt"}`)
-                          ?.scrollIntoView({
-                            behavior: "smooth",
-                          });
-                      }}>Kontakt</Button>
+          <Button
+            size={"btn--medium"}
+            style={"btn--call-to-action"}
+            onClick={(e) => {
+              e.preventDefault();
+              document.querySelector(`#${"kontakt"}`)?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
+            Kontakt
+          </Button>
           <div
             className={sideBar ? styles.menuIconActive : styles.menuIcon}
             onClick={() => {

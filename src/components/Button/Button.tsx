@@ -7,7 +7,7 @@ const SIZES = ['btn--medium', 'btn--large', 'btn--medium--round', 'btn--long', '
 interface Props {
 	children: React.ReactNode;
 	type?: "button" | "submit" | "reset";
-	onClick?: () => void;
+	onClick?: (e?:any) => void;
 	style: string;
 	size: string | "btn--medium" | "btn--large" | "btn--medium--round" | "btn--long" | "btn--small";
 }
