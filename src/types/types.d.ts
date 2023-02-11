@@ -4,7 +4,8 @@ export type Navitem = {
   type: string,
   path: string,
   icon?: string,
-  items?: Navsubitem[]
+  items?: Navsubitem[],
+  hideDesktop?: boolean,
 };
 export type Navsubitem = {
   title: string,

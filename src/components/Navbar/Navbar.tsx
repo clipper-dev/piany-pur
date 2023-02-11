@@ -60,7 +60,7 @@ function Navbar({ navbarData, sideBardata, favicon, title, phone }: Props) {
         <div className={styles.menu}>
           <div className={styles.tabs}>
             {navbarData.map((item, index) => {
-              return (
+              return (!item.hideDesktop && (
                 <div key={index} className={styles.tabItem}>
                   {item.type === "scroll" && (
                     <a
@@ -111,15 +111,34 @@ function Navbar({ navbarData, sideBardata, favicon, title, phone }: Props) {
                       </div>
                     </div>
                   )}
-                  {item.type === "info" && item.title}
-                </div>
+                  {item.type === "info" && item.title}        
+                  
+                </div>)
+                
               );
+              
             })}
+            <Button size={"btn--medium"} style={"btn--call-to-action"} onClick={(e) => {
+                        e.preventDefault();
+                        document
+                          .querySelector(`#${"kontakt"}`)
+                          ?.scrollIntoView({
+                            behavior: "smooth",
+                          });
+                      }}>Kontakt</Button>
+          
           </div>
         </div>
         {/*Right section of the navbar, CTA and mobile menu*/}
         <div className={styles.mobileMenu}>
-          <Button size={"btn--medium"} style={"btn--call-to-action"}>Kontakt</Button>
+          <Button size={"btn--medium"} style={"btn--call-to-action"} onClick={(e) => {
+                        e.preventDefault();
+                        document
+                          .querySelector(`#${"kontakt"}`)
+                          ?.scrollIntoView({
+                            behavior: "smooth",
+                          });
+                      }}>Kontakt</Button>
           <div
             className={sideBar ? styles.menuIconActive : styles.menuIcon}
             onClick={() => {

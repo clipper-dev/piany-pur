@@ -18,7 +18,14 @@ export default function HeroAlt() {
           <li>Oszczędność pieniędzy</li>
           <li>Wysoka trwałość</li>
         </ul>
-        <button className={styles.button}>
+        <button className={styles.button} onClick={(e) => {
+                        e.preventDefault();
+                        document
+                          .querySelector(`#${"kontakt"}`)
+                          ?.scrollIntoView({
+                            behavior: "smooth",
+                          });
+                      }}>
           Napisz do nas <FaFacebookMessenger />
         </button>
       </article>

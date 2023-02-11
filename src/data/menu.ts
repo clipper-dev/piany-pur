@@ -30,5 +30,6 @@ export const data:Navitem[] = [
     title: "Kontakt",
     type: "scroll",
     path: "kontakt",
+    hideDesktop: true,    
   },
 ];

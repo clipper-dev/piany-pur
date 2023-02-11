@@ -1,8 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import About from "../src/components/About/About";
 import Bus from "../src/components/Bus/Bus";
 import Features from "../src/components/Features/Features";
+import Arrow from "../src/components/helpers/Arrow";
 import Hero from "../src/components/Hero/Hero";
 import Testimonials from "../src/components/Testimonials/Testimonials";
 import { data } from "../src/data/testimonials";
@@ -21,9 +23,15 @@ const Home: NextPage = () => {
       </Head>
 
         <Hero />
+        <Arrow/>
+        <About/>
+        <Arrow/>
         <Features/>
+        <Arrow/>
         <Testimonials testimonials={data}/>
+        <Arrow/>
         <Bus/>
+        <Arrow/>
     </div>
   );
 };

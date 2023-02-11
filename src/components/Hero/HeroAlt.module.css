@@ -1,8 +1,7 @@
 .container {
   position: relative;
   width: 100%;
-  height: fit-content;
-  min-height: 800px;
+  height: calc(100vh - 60px);
   color: white;
   display: flex;
   flex-direction: column;

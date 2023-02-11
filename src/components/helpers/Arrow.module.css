@@ -1,0 +1,24 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 3rem 0;
+    justify-content: center;
+}
+.arrow{
+    font-size: 2rem;
+    animation: pulsate 2s infinite ease-in-out alternate;
+}
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
