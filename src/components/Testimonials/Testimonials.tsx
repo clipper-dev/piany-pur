@@ -9,7 +9,7 @@ interface Props {
 export default function Testimonials({ testimonials }: Props) {
   return (
     <div className={styles.container} id={"opinie"}>
-      <section>
+      <section data-aos="fade-left">
         <h2>ZADOWOLENI KLIENCI</h2>
         <div className={styles.testimonials}>
           {testimonials.map((testimonial, key) => (

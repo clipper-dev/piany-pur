@@ -5,7 +5,7 @@ import styles from "./Bus.module.css";
 export default function Bus() {
   return (
     <div className={styles.container}>
-      <section>
+      <section data-aos="fade-right">
         <div className={styles.image}>
           <Image
             src={"/res/images/bus.png"}

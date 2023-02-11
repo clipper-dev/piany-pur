@@ -29,9 +29,9 @@ export default function Features() {
   }
   return (
     <div className={styles.container} id="oferta">
-      <section>
+      <section data-aos="fade-right">
         <h2>CO WYRÓŻNIA IZOLACJĘ PIANĄ PUR?</h2>
-        <div className={styles.features}>
+        <div className={styles.features} >
           {features.map((feature, index) => (
             <div key={index} className={styles.feature}>
               <div className={styles.featureHeader}>

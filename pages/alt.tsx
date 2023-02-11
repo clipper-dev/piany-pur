@@ -1,4 +1,7 @@
 import type { NextPage } from "next";
+import AOS from "aos";
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import About from "../src/components/About/About";
@@ -12,6 +15,9 @@ import { data } from "../src/data/testimonials";
 import styles from "../src/styles/pages/Home.module.css";
 
 const Home: NextPage = () => {
+  useEffect(() => {
+    AOS.init();
+  }, [])
   return (
     <main className={styles.container}>
       <Head>
@@ -27,7 +33,7 @@ const Home: NextPage = () => {
         <Arrow/>
         <About/>
         <Arrow/>
-        <Features/>
+        <Features />
         <Arrow/>
         <Testimonials testimonials={data}/>
         <Arrow/>

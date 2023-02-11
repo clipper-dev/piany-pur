@@ -7,7 +7,7 @@ export default function About() {
   return (
     <div className={styles.container}>
       <section>
-        <div className={styles.about}>
+        <div className={styles.about} data-aos="fade-left">
           <h2>
             Zajmiemy się Twoją{" "}
             <span style={{ color: "var(--accent)" }}>izolacją,</span>{" "}
