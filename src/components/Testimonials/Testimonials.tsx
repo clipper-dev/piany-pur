@@ -9,11 +9,11 @@ interface Props {
 export default function Testimonials({ testimonials }: Props) {
   return (
     <div className={styles.container} id={"opinie"}>
-      <section data-aos="fade-left">
+      <section>
         <h2>ZADOWOLENI KLIENCI</h2>
         <div className={styles.testimonials}>
           {testimonials.map((testimonial, key) => (
-            <div key={key} className={styles.testimonial}>
+            <div key={key} className={styles.testimonial} data-aos="fade-left">
               <FaQuoteLeft className={styles.quote}/>
               {testimonial.description}
               <div className={styles.footer}>

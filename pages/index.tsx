@@ -12,13 +12,14 @@ import Hero from "../src/components/Hero/Hero";
 import Testimonials from "../src/components/Testimonials/Testimonials";
 import { data } from "../src/data/testimonials";
 import styles from "../src/styles/pages/Home.module.css";
+import HeroAlt from "../src/components/Hero/HeroAlt";
 
 const Home: NextPage = () => {
   useEffect(() => {
     AOS.init();
   }, [])
   return (
-    <div className={styles.container}>
+    <main className={styles.container}>
       <Head>
         <title>Purspray - Pianowanie Poddaszy</title>
         <meta
@@ -28,17 +29,17 @@ const Home: NextPage = () => {
         <link rel="icon" href="/logo.png" />
       </Head>
 
-        <Hero />
+      <HeroAlt />
         <Arrow/>
         <About/>
         <Arrow/>
-        <Features/>
+        <Features />
         <Arrow/>
         <Testimonials testimonials={data}/>
         <Arrow/>
         <Bus/>
         <Arrow/>
-    </div>
+    </main>
   );
 };
 

@@ -35,6 +35,16 @@ const features: Feature[] = [
         description: 'Izolacja natryskowa eliminuje problemy z kondensacją.',
         icon: 'condensation',
         link: '/#'
+    },
+    {
+        name: 'OCHRONA PRZED GRYZONAMI',
+        description: 'Szczelna izolacja zabezpiecza przed dostępem gryzoni do budynku.',
+        icon: 'rat',
+    },
+    {
+        name: 'BEZPIECZNA DLA ZDROWIA',
+        description: 'Brak pustych przestrzeni w izolacji sprawia, że nie ma miejsca na rozwój grzybów i pleśni.',
+        icon: 'health',
     }
 ]
 export default features;
