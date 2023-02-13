@@ -13,7 +13,7 @@ const features: Feature[] = [
         link: '/#'
     },
     {
-        name: 'WYSOKA TRWAŁOŚĆ NA LATA',
+        name: 'TRWAŁOŚĆ NA LATA',
         description: 'Piana Pur będzie trwała przez cały czas istnienia budynku.',
         icon: 'life',
         link: '/#'
@@ -37,7 +37,7 @@ const features: Feature[] = [
         link: '/#'
     },
     {
-        name: 'OCHRONA PRZED GRYZONAMI',
+        name: 'ZERO GRYZONI',
         description: 'Szczelna izolacja zabezpiecza przed dostępem gryzoni do budynku.',
         icon: 'rat',
     },
