@@ -14,6 +14,8 @@ export default function Footer() {
           <div className={styles.line}></div>
           <p>Purspray</p>
           <p>Arkadiusz Wilk</p>
+          <p>+48 600 370 109</p>
+          <p>purspray@gmail.com</p>
           <p>NIP: 8571030470</p>
           <p>REGON: 522255463</p>
         </div>

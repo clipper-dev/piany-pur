@@ -7,6 +7,10 @@ export default function HeroAlt() {
   return (
     <header className={styles.container} id="home">
       <article className={styles.content}>
+        <div className={styles.header}>
+          <h2>Autoryzowany wykonawca </h2>
+          <Image src="/res/images/cels-logo.svg" height={30} width={100} alt=""/>
+        </div>
         <h1>OCIEPLANIE PIANĄ PUR</h1>
         <p>
           Nasza niezawodna izolacja pianą PUR to świetne rozwiązanie, jeśli
@@ -18,14 +22,15 @@ export default function HeroAlt() {
           <li>Oszczędność pieniędzy</li>
           <li>Wysoka trwałość</li>
         </ul>
-        <button className={styles.button} onClick={(e) => {
-                        e.preventDefault();
-                        document
-                          .querySelector(`#${"kontakt"}`)
-                          ?.scrollIntoView({
-                            behavior: "smooth",
-                          });
-                      }}>
+        <button
+          className={styles.button}
+          onClick={(e) => {
+            e.preventDefault();
+            document.querySelector(`#${"kontakt"}`)?.scrollIntoView({
+              behavior: "smooth",
+            });
+          }}
+        >
           Napisz do nas <FaFacebookMessenger />
         </button>
       </article>

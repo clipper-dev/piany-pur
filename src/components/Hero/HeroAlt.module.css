@@ -24,8 +24,20 @@
   /* gradient text */
   background: var(--header-gradient);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--coolbiej-colors-greychristian-900);
+  background-color: #ffffff88;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  box-shadow: var(--coolbiej-shadows-lg), var(--coolbiej-shadows-md), var(--coolbiej-shadows-sm);
 }
 @media screen and (max-width: 600px) {
   .content{

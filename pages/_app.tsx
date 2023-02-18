@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         sideBardata={data}
         favicon="/res/logo.png"
         title=""
-        phone="+48 664 489 898"
+        phone="+48 600 370 109"
       />
       <Component {...pageProps} />
 
