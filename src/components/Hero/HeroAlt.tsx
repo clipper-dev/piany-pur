@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { FaFacebookMessenger } from "react-icons/fa";
+import { HiChatBubbleOvalLeft } from "react-icons/hi2";
 import styles from "./HeroAlt.module.css";
 
 export default function HeroAlt() {
@@ -9,7 +9,12 @@ export default function HeroAlt() {
       <article className={styles.content}>
         <div className={styles.header}>
           <h2>Autoryzowany wykonawca </h2>
-          <Image src="/res/images/cels-logo.svg" height={30} width={100} alt=""/>
+          <Image
+            src="/res/images/cels-logo.svg"
+            height={30}
+            width={100}
+            alt=""
+          />
         </div>
         <h1>OCIEPLANIE PIANĄ PUR</h1>
         <p>
@@ -31,14 +36,16 @@ export default function HeroAlt() {
             });
           }}
         >
-          Napisz do nas <FaFacebookMessenger />
+          Napisz do nas <HiChatBubbleOvalLeft />
         </button>
       </article>
       <div className={styles.imageWrapper}>
         <div className={styles.image}>
           <Image
             style={{ objectFit: "cover" }}
-            src="/res/images/dom1.jpeg"
+            src="/res/images/dom1.webp"
+            placeholder="blur"
+            blurDataURL="/res/images/dom1-temp.webp"
             fill
             alt="Pianownaie poddaszy pianą PUR"
           />

@@ -77,7 +77,6 @@
     justify-content: center;
     gap: 0.5rem;
 }
-
 .middle {
     width: min(500px, 95%);
     display: flex;
@@ -118,7 +117,17 @@
     font-size: 1rem;
     font-weight: 400;
     transition: all 0.2s ease-in-out;
+    outline: ;
 }
+
+.wrong {
+    outline-color: tomato;
+    color: red !important;
+}
+.inputField input:focus, .inputField textarea:focus {
+    box-shadow: var(--coolbiej-shadows-lg);
+}
+
 .inputLong {
     /* no resize */
     resize: none;

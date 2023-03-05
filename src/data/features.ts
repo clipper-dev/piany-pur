@@ -8,7 +8,7 @@ const features: Feature[] = [
     },
     {
         name: 'TERMICZNIE EFEKTYWNE',
-        description: 'Izolacja natryskowa może służyć zarówno jako materiał izolacyjny, jak i bariera powietrzna.',
+        description: 'Izolacja natryskowa może służyć jako materiał izolacyjny.',
         icon: 'thermometer',
         link: '/#'
     },
