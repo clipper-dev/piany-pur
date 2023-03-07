@@ -1,7 +1,11 @@
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 import styles from "./Footer.module.css";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -9,17 +13,59 @@ export default function Footer() {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   /* refs */
-  const emailRef = React.useRef<HTMLInputElement>(null);
-  const nameRef = React.useRef<HTMLInputElement>(null);
-  const phoneRef = React.useRef<HTMLInputElement>(null);
-  const messageRef = React.useRef<HTMLTextAreaElement>(null);
+  const emailRef = useRef(null);
+  const nameRef = useRef(null);
+  const phoneRef = useRef(null);
+  const messageRef = useRef(null);
 
   const [error, setError] = useState(false);
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+    if (isValidEmail(email)) {
+      emailjs
+        .sendForm(
+          "service_29ge6ks",
+          "template_o0cfgl7",
+          form.current,
+          "aAIJXmkl6B17MjbSF"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            toast("📩 Email wysłany!", {
+              position: "top-center",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+            });
+            form.current.reset();
+          },
+          (error) => {
+            console.log(error.text);
+            toast.error("⛈️ Coś poszło nie tak...", {
+              position: "top-center",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+            });
+          }
+        );
+    }
+  };
 
-  function isValidEmail(email: string) {
+  function isValidEmail(email) {
     return /\S+@\S+\.\S+/.test(email);
   }
-  function handleEmail(e: any) {
+  function handleEmail(e) {
     if (e.target.value.length > 0) {
       setError(!isValidEmail(e.target.value));
     } else {
@@ -27,7 +73,7 @@ export default function Footer() {
     }
     setEmail(e.target.value);
   }
-  function handleSubmit(e: any) {
+  function handleSubmit(e) {
     e.preventDefault();
     const _mail = {
       email: email,
@@ -46,6 +92,18 @@ export default function Footer() {
   }
   return (
     <div className={styles.container} id="kontakt">
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       <div className={styles.content}>
         <div className={styles.left}>
           <div className={styles.logo}>
@@ -60,7 +118,7 @@ export default function Footer() {
           <p>NIP: 8571030470</p>
           <p>REGON: 522255463</p>
         </div>
-        <form className={styles.middle}>
+        <form className={styles.middle} ref={form} onSubmit={sendEmail}>
           <div className={styles.topForm}>
             <div className={styles.inputField}>
               <div className={styles.label}>Imię:*</div>
@@ -69,6 +127,7 @@ export default function Footer() {
                 placeholder="Twoje imię"
                 ref={nameRef}
                 onChange={(e) => setName(e.target.value)}
+                name="user_name"
               />
             </div>
             <div className={styles.inputField}>
@@ -78,6 +137,7 @@ export default function Footer() {
                 placeholder="Podaj swój numer telefonu"
                 ref={phoneRef}
                 onChange={(e) => setPhone(e.target.value)}
+                name="user_phone"
               />
             </div>
           </div>
@@ -92,6 +152,7 @@ export default function Footer() {
               placeholder="Podaj swój adres email"
               ref={emailRef}
               onChange={(e) => handleEmail(e)}
+              name="user_email"
             />
           </div>
           <div className={styles.inputField}>
@@ -101,13 +162,10 @@ export default function Footer() {
               placeholder="Wprowadź swoją wiadomość"
               ref={messageRef}
               onChange={(e) => setMessage(e.target.value)}
+              name="message"
             />
           </div>
-          <button
-            type="submit"
-            onClick={(e) => handleSubmit(e)}
-            className={styles.button}
-          >
+          <button type="submit" value="Send" className={styles.button}>
             Wyślij
           </button>
         </form>
